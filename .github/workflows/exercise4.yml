@@ -35,15 +35,14 @@ jobs:
   needs: build
   environment:
    name: prod
-   url: http://funny-shoes.surge.sh
-
+   url: http://imported-muscle.surge.sh
   steps:
    - name: Download the Build Artifact
      uses: actions/download-artifact@v4.1.9
      with:
       name: build
    - name: deploy to surge
-     run: npx surge --project ‘.’ --domain http://funny-shoes.surge.sh
+     run: npx surge --project ‘.’ --domain http://imported-muscle.surge.sh
      env:
       SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
       SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
