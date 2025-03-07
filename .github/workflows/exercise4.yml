@@ -16,7 +16,7 @@ jobs:
        env:
         CI: true
      - name: Upload code coverage
-       uses: action/upload-artifacts@4.6.1
+       uses: actions/upload-artifacts@4.6.1
        with:
         name: codecoverage
         path: codecoverage
